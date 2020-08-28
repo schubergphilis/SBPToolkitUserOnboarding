@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/schubergphilis/Azure/master/Services/schema.json",
+    "contentVersion": "1.0.0.0",
+    "defaults": {
+        "serviceGroup": "serviceGroup",
+        "roles": [
+            "contributor",
+            "reader"
+        ],
+        "tags": {
+            "projectcode": "SBPOnboarding",
+            "costcenter": "CAT"
+        }
+    },
+    "services": [
+        {
+            "name": "test",
+            "shortName": "test",
+            "roles": {},
+            "resourceGroup": {
+                "tags": {
+                    "service": "test"
+                },
+                "sequence": 0
+            }
+        }
+    ]
+}
