@@ -23,8 +23,8 @@ stages:
     jobs:
     - template: Pipelines/jobs/deployOnboarding.yml@sources
       parameters:
-        connectedServiceName: "${{ format('{0}-spn', variables.username) }}"
+        connectedServiceName: $(username)-spn
         environmentName: 'tst001'
         location: '${{ variables.location }}'
-        serviceGroup: '${{ variables.username }}'
+        serviceGroup: "$(userName)"
         vmImage: '${{ variables.vmImage }}'
