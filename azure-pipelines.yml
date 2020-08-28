@@ -1,15 +1,3 @@
-###############################################################################
-# Schuberg Philis
-#
-# Services Onboarding
-#
-# Please see readme.md for details
-###############################################################################
-#
-
-#
-#################################################################################################
-
 trigger:
   branches:
     include:
@@ -20,7 +8,7 @@ variables:
     value: 'windows-2019'
   - name: location
     value: 'West Europe'
-  -group: onboarding-group
+  - group: onboarding-group
 
 resources:
   repositories:
