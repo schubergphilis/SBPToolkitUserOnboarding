@@ -1,21 +1,22 @@
 {
-    "$schema": "https://raw.githubusercontent.com/schubergphilis/Azure/master/Services/schema.json",
+    "$schema": "https://raw.githubusercontent.com/schubergphilis/Azure/master/ServiceGroups/schema.json",
     "contentVersion": "1.0.0.0",
     "defaults": {
-        "serviceGroup": "serviceGroup",
+        "serviceGroup": "Onboarding",
         "roles": [
             "contributor",
             "reader"
         ],
         "tags": {
             "projectcode": "SBPOnboarding",
-            "costcenter": "CAT"
+            "costcenter": "CAT",
+            "servicegroup": "Onboarding"
         }
     },
     "services": [
         {
             "name": "test",
-            "shortName": "test",
+            "shortName": "tst",
             "roles": {},
             "resourceGroup": {
                 "tags": {
