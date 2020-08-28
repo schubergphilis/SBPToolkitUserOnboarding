@@ -18,16 +18,13 @@ resources:
       ref: refs/heads/master
 
 stages:
-  parameters:
-    vmImage: '${{ variables.vmImage }}'
-
-- stage: deploy
-  displayName: deploy 
-  jobs:
-  - template: Pipelines/jobs/deployOnboarding.yml@sources
-    parameters:
-      connectedServiceName: "${{ format('{0}-spn', variables.username) }}"
-      environmentName: 'tst001'
-      location: '${{ variables.location }}'
-      serviceGroup: '${{ variables.username }}'
-      vmImage: '${{ variables.vmImage }}'
+  - stage: deploy
+    displayName: deploy 
+    jobs:
+    - template: Pipelines/jobs/deployOnboarding.yml@sources
+      parameters:
+        connectedServiceName: "${{ format('{0}-spn', variables.username) }}"
+        environmentName: 'tst001'
+        location: '${{ variables.location }}'
+        serviceGroup: '${{ variables.username }}'
+        vmImage: '${{ variables.vmImage }}'
